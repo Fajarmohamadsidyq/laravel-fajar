@@ -17,6 +17,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/tesmodel', function () {
+    return App\Models\Post::all();
+});
+
+Route::get('/tes-post', function () {
+    $query = App\Models\Post::all();
+    return view('tes-post', compact('query'));
+});
+
+Route::get('/bio', function () {
+    return App\Models\biodata::all();
+});
+
+Route::get('/tes-bio', function () {
+    $query = App\Models\biodata::all();
+    return view('tes-bio', compact('query'));
+});
+
 Route::get('hobi', function () {
     $hobiku = [
         ['nis' => 1001,
