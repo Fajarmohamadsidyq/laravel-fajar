@@ -17,6 +17,54 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('hobi', function () {
+    $hobiku = [
+        ['nis' => 1001,
+            'nama' => 'Adzura',
+            'kelas' => '12 RPL 1',
+            'hobi' => [
+                'hobi1' => 'Pergi ke CC',
+                'hobi2' => 'Tiktokan',
+                'hobi3' => 'Makan',
+            ],
+
+        ],
+
+        ['nis' => 1002,
+            'nama' => 'Ikbal',
+            'kelas' => '12 RPL 1',
+            'hobi' => [
+                'hobi1' => 'Maen Bola',
+                'hobi2' => 'Ngaji',
+                'hobi3' => 'Mancing',
+            ],
+
+        ],
+
+    ];
+    return view('hobi', compact('hobiku'));
+
+});
+
+Route::get('mapel', function () {
+    $matkul = [
+        ['id' => 1,
+            'nama' => 'Fajar Mohamad Sidyq',
+            'username' => 'fajar',
+            'email' => 'Fajar@gmail.com',
+            'alamat' => 'Bandung',
+            'mapel' => [
+                'mapel1' => 'Bahasa Indonesia',
+                'mapel2' => 'Bahasa Inggris',
+                'Mapel3' => 'Bahasa Thailand',
+            ],
+
+        ],
+    ];
+    return view('mapel', compact('matkul'));
+
+});
+
 Route::get('mahasiswa', function () {
     $siswa = [
         ['nis' => 11011, 'nama' => 'Mark', 'jk' => 'Laki-laki', 'jurusan' => 'RPL', 'kelas' => 'XII RPL 1', 'waliKelas' => 'pak ute'],
