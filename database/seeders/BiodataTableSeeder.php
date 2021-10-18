@@ -22,7 +22,7 @@ class BiodataTableSeeder extends Seeder
             ['nama' => 'Miskah', 'ttl' => '2005-05-05', 'jk' => 'Laki-laki', 'alamat' => 'Rusia', 'agama' => 'Islam', 'usia' => 21, 'hobi' => 'Membuat Rudal'],
         ];
         // masukan data ke database
-        DB::table('biodata')->insert($bio);
+        DB::table('biodatas')->insert($bio);
 
     }
 }

@@ -30,7 +30,7 @@ Route::get('/bio', function () {
     return App\Models\biodata::all();
 });
 
-Route::get('/tes-bio', function () {
+Route::get('/tes2', function () {
     $query = App\Models\biodata::all();
     return view('tes-bio', compact('query'));
 });
