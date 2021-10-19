@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\BarangController;
 use App\Http\Controllers\MyController;
+use App\Http\Controllers\PembelianController;
+use App\Http\Controllers\PemesananController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,9 +18,9 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // Route::get('/tesmodel', function () {
 //     return App\Models\Post::all();
@@ -183,3 +186,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/contoh', [MyController::class, 'tampilkan']);
 Route::get('/artikel', [PostController::class, 'data']);
+Route::get('/barang', [BarangController::class, 'barang']);
+Route::get('/pembelian', [PembelianController::class, 'pembelian']);
+Route::get('/pemesanan', [PemesananController::class, 'pemesanans']);
