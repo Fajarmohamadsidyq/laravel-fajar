@@ -2,9 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Pembeli;
 
 class PembeliController extends Controller
 {
-    //
+    public function beli()
+    {
+
+        $belian = Pembeli::get();
+
+        return view('pembeli', compact('belian'));
+    }
 }

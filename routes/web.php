@@ -1,10 +1,10 @@
 <?php
 
 use App\Http\Controllers\BarangController;
-use App\Http\Controllers\MyController;
 use App\Http\Controllers\PembelianController;
+use App\Http\Controllers\PembeliController;
 use App\Http\Controllers\PemesananController;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\SuplierController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -184,8 +184,10 @@ Route::get('/', function () {
 //    return view('sample');
 // });
 
-Route::get('/contoh', [MyController::class, 'tampilkan']);
-Route::get('/artikel', [PostController::class, 'data']);
+// Route::get('/contoh', [MyController::class, 'tampilkan']);
+// Route::get('/artikel', [PostController::class, 'data']);
 Route::get('/barang', [BarangController::class, 'barang']);
 Route::get('/pembelian', [PembelianController::class, 'pembelian']);
 Route::get('/pemesanan', [PemesananController::class, 'pemesanans']);
+Route::get('/pembeli', [PembeliController::class, 'beli']);
+Route::get('/supplier', [SuplierController::class, 'supplier']);
